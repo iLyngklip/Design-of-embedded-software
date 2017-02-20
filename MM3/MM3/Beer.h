@@ -9,3 +9,6 @@ struct Beer {
 struct Beer *addBeer(struct Beer *beer);
 void seeBeers(struct Beer *beer);
 
+struct Beer *typeToFind(struct Beer *beer);
+void removeSpecificBeer(struct Beer *beer);
+
