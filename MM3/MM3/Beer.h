@@ -12,3 +12,7 @@ void seeBeers(struct Beer *beer);
 struct Beer *typeToFind(struct Beer *beer);
 void removeSpecificBeer(struct Beer *beer);
 
+struct Beer *removeSpecificBeer2(struct Beer *beer);
+int type2Find(struct Beer *beer);
+
+void FUCKIT(struct Beer *beer);

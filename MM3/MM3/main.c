@@ -23,7 +23,9 @@ int main() {
       if (nSelection==1) beer=addBeer(beer);
       else if (nSelection==2) seeBeers(beer);
       else if (nSelection==4){
-          removeSpecificBeer(beer);
+          // removeSpecificBeer(beer);
+          beer=removeSpecificBeer2(beer);
+          //FUCKIT(beer);
       }
    }
    return 0;

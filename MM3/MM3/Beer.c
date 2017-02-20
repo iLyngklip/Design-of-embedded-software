@@ -95,20 +95,43 @@ void removeSpecificBeer(struct Beer *beer){
 }
 
 // Koncept 2
-void removeSpecificBeer2(struct Beer *beer){
+struct Beer *removeSpecificBeer2(struct Beer *beer){
     int tmp = type2Find(beer);
     
-    struct Beer *tmpBeer;
-    //tmpBeer = beer->next;
+    struct Beer *firstBeer = beer;
+    struct Beer *actualBeer = beer;
+    //nextBeer = actualBeer->next;
     // Check if it actually worked finding the string
     if(tmp != -1){
-        for(int i = 0; i < tmp-1; i++){
-            beer = beer->next;
+        for(int i = 0; i < tmp; i++){
+            actualBeer = actualBeer->next;
         }
-        tmpBeer = beer->
+        // Skip one
+        //beer = tmpBeer->next;
+        g_nNumberOfBeers--;
+        return (actualBeer->next)->next;
+        /*
+        for(int i = tmp+1; i < g_nNumberOfBeers-1; i++){
+            nextBeer = nextBeer->next;
+        };
+         */
+        
+        
+        
     } else {
-        return;
+        return beer;
     }
+}
+
+
+// Den her virker!!
+void FUCKIT(struct Beer *beer){
+    struct Beer *D2 = beer;
+    
+    beer->next = (beer->next)->next;
+    g_nNumberOfBeers--;
+    
+   
 }
 
 
