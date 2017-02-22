@@ -5,6 +5,9 @@
 #include <stdio.h>
 
 #include "Beer.h"
+// #include "SaveStuffToText.h"
+
+#define FILENAME savedBeers.txt
 
 /**
  * We have added to menu: Remove beer
@@ -16,7 +19,7 @@ int menu() {
    printf("1) Add new beer\n");
    printf("2) Remove beer\n");
    printf("3) See all beers\n");
-    printf("4) Save beers in the beer-bank");
+    printf("4) Save beers in the beer-bank\n");
    printf("4) Stop program\n");
    scanf("%d",&nSelection);
    return nSelection;
@@ -43,6 +46,7 @@ int main() {
             seeBeers(beer);
       } else if (nSelection==4) {
           // GEM ØL HER!
+          saveStuff(beer);
       }
    }
    return 0;

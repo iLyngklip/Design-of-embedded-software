@@ -4,8 +4,7 @@
 
 #include "Beer.h"
 
-static int g_nNumberOfBeers=0; /* Made static so it only can be accessed here */
-                               /* g_ is for "global" */
+
 
 struct Beer *addBeer(struct Beer *beer) {
    struct Beer *new_beer;
@@ -64,4 +63,27 @@ struct Beer *removeBeer(struct Beer *beer,char *szID) {
    }
    return start; /* Vi har ikke fundet en bajer der matchede */
 }
+
+
+// Case FILENAME er defineret
+int saveStuff(struct Beer *beersToSave){
+    FILE *fp = openFile(FILENAME);
+    if(fp){
+        struct Beer *tmp;
+        int i;
+        for (i=0; i<g_nNumberOfBeers; i++) {
+            tmp=beersToSave->next;
+            fprintf(fp, "Type: %s\n",beersToSave->type);
+            fprintf(fp, "Price: %f\n",beersToSave->price);
+            fprintf(fp, "Percentage: %f\n",beersToSave->alc);
+            fprintf(fp, "Amount [ml]: %f\n",beersToSave->ml);
+            fprintf(fp, "----------\n");
+            beersToSave=tmp;
+        }
+        return fp;
+    } else {
+        return NULL;
+    }
+}
+
 
