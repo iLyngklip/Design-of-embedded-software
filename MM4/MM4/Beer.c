@@ -66,9 +66,8 @@ struct Beer *removeBeer(struct Beer *beer,char *szID) {
 
 
 // Case FILENAME er defineret
-int saveStuff(struct Beer *beersToSave){
-    FILE *fp = openFile(FILENAME);
-    if(fp){
+FILE saveStuff(struct Beer *beersToSave){
+    FILE *fp = fopen("dillermis.txt", "w");
         struct Beer *tmp;
         int i;
         for (i=0; i<g_nNumberOfBeers; i++) {
@@ -80,10 +79,5 @@ int saveStuff(struct Beer *beersToSave){
             fprintf(fp, "----------\n");
             beersToSave=tmp;
         }
-        return fp;
-    } else {
-        return NULL;
-    }
+        return *fp;
 }
-
-

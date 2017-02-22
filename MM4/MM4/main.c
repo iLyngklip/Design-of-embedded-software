@@ -7,7 +7,7 @@
 #include "Beer.h"
 // #include "SaveStuffToText.h"
 
-#define FILENAME savedBeers.txt
+// #define FILENAME savedBeers.txt
 
 /**
  * We have added to menu: Remove beer
@@ -46,7 +46,7 @@ int main() {
             seeBeers(beer);
       } else if (nSelection==4) {
           // GEM ØL HER!
-          saveStuff(beer);
+          // saveStuff(beer);
       }
    }
    return 0;
