@@ -30,8 +30,11 @@ int main() {
    struct Beer *beer;
    char szType[81];
    int nSelection=0;
+   
+   beer=NULL;
    oneDoesSimplyGetBeerFromPlaces(beer);
-   // beer=NULL;
+    
+    
     
    while (nSelection!=5) {
       nSelection=menu();

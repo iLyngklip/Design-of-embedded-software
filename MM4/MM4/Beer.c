@@ -92,23 +92,79 @@ void oneDoesSimplyNotSaveBeer(struct Beer *beersToSave){
     }
 }
 
-void oneDoesSimplyGetBeerFromPlaces(struct Beer *beer){
+struct Beer *oneDoesSimplyGetBeerFromPlaces(struct Beer *beer){
+    FILE *fp = fopen("/Users/iLyngklip/Dropbox/AAU/jegErSej.txt","r");
     struct Beer *readBeer;
     /* Allocate space for new element/node: */
     readBeer=(struct Beer *)malloc(sizeof(struct Beer));
     /* Insert new element/beer before any other element: */
     readBeer->next=beer;
+    char strings[5][15];
+    // char type[6];
+    char price[7];
     
-    printf("Type: ");
-    scanf("%s",readBeer->type);
-    printf("Price: ");
-    scanf("%f",&readBeer->price);
-    printf("Percentage: ");
-    scanf("%f",&readBeer->alc);
-    printf("Amount [ml]: ");
-    scanf("%f",&readBeer->ml);
     
-    g_nNumberOfBeers++; /* We increment since we just added a beer */
+    fscanf(fp, "%s %d", strings, &g_nNumberOfBeers);
+    
+    // char typeBeer[81];
+    if(g_nNumberOfBeers != 0){
+        char tempType[81];
+        float tempVals[3];
+        char tempStorage[100];
+        fgets(tempStorage, 100,fp);
+        for(int i = 0; i< g_nNumberOfBeers; i++){
+            
+            for(int k=0;k<=4;k++){
+                fgets(tempStorage, 100, fp);
+                if(k==0){
+                    sscanf(tempStorage, "%s %s",strings[0],tempType);
+                } else if(k==4){
+                // stuff
+                    sscanf(tempStorage, "%s %s %f", strings[0],strings[1],&tempVals[k-1]);
+                } else {
+                    sscanf(tempStorage, "%s %f",strings[0], &tempVals[k-1]);
+                }
+                /*sscanf(tempStorage,"%s %d %s %80s %s %f %s %f %s %s %f",
+                       strings[0],
+                       &g_nNumberOfBeers,
+                       strings[1],
+                       readBeer->type,
+                       &price,
+                       &readBeer->price,
+                       strings[3],
+                       &readBeer->alc,
+                       strings[4],
+                       strings[0],
+                       &readBeer->ml
+                       );
+                 */
+            }
+            // Gem data her!
+            strcpy(tempType, readBeer->type);
+            readBeer->price = tempVals[0];
+            readBeer->alc = tempVals[1];
+            readBeer->ml = tempVals[2];
+            
+        }
+    }
+    
+ //
+    
+    printf("Antal bajer fundet: %d\n", g_nNumberOfBeers);
+    
+    
+    // struct Beer *tmp;
+    int i;
+    printf("Har fundet:\n");
+    for (i=0; i<g_nNumberOfBeers; i++) {
+        printf("Type: %s\n",readBeer->type);
+        printf("Price: %f\n",readBeer->price);
+        printf("Percentage: %f\n",readBeer->alc);
+        printf("Amount [ml]: %f\n",readBeer->ml);
+    }
+    
+    fclose(fp);
+    // addBeer(readBeer);
     return readBeer;
     
 }

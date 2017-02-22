@@ -11,5 +11,4 @@ void seeBeers(struct Beer *beer);
 struct Beer *removeBeer(struct Beer *beer,char *szType);
 
 void oneDoesSimplyNotSaveBeer(struct Beer *beersToSave);
-void oneDoesSimplyGetBeerFromPlaces();
-
+struct Beer *oneDoesSimplyGetBeerFromPlaces(struct Beer *beer);
