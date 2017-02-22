@@ -65,3 +65,55 @@ struct Beer *removeBeer(struct Beer *beer,char *szID) {
    return start; /* Vi har ikke fundet en bajer der matchede */
 }
 
+
+
+void oneDoesSimplyNotSaveBeer(struct Beer *beersToSave){
+    FILE *fp = fopen("/Users/iLyngklip/Dropbox/AAU/jegErSej.txt","w");
+    if(!fp)
+    {
+        printf("THIS IS BULLSHIT\n");
+    } else
+    {
+        // printf("Jeg er faktisk sej\n");
+        // printf("%d\n", fp);
+        struct Beer *tmp;
+        fprintf(fp, "%s %d\n", "antalBajer",g_nNumberOfBeers);
+        for (int i=0; i<g_nNumberOfBeers; i++)
+        {
+            tmp=beersToSave->next;
+            fprintf(fp, "%s %s\n", "Type:", beersToSave->type);
+            fprintf(fp, "%s %f\n", "Price:", beersToSave->price);
+            fprintf(fp, "%s %f\n", "Percentage:", beersToSave->alc);
+            fprintf(fp, "%s %s %f\n", "Amount", "[ml]:", beersToSave->ml);
+            beersToSave=tmp;
+            printf("dillertest\n");
+        }
+        fclose(fp);
+    }
+}
+
+void oneDoesSimplyGetBeerFromPlaces(struct Beer *beer){
+    struct Beer *readBeer;
+    /* Allocate space for new element/node: */
+    readBeer=(struct Beer *)malloc(sizeof(struct Beer));
+    /* Insert new element/beer before any other element: */
+    readBeer->next=beer;
+    
+    printf("Type: ");
+    scanf("%s",readBeer->type);
+    printf("Price: ");
+    scanf("%f",&readBeer->price);
+    printf("Percentage: ");
+    scanf("%f",&readBeer->alc);
+    printf("Amount [ml]: ");
+    scanf("%f",&readBeer->ml);
+    
+    g_nNumberOfBeers++; /* We increment since we just added a beer */
+    return readBeer;
+    
+}
+
+
+
+
+

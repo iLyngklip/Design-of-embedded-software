@@ -16,8 +16,8 @@ int menu() {
    printf("1) Add new beer\n");
    printf("2) Remove beer\n");
    printf("3) See all beers\n");
-    printf("4) Save beers in the beer-bank");
-   printf("4) Stop program\n");
+   printf("4) Save beers in the beer-bank\n");
+   printf("5) Stop program\n");
    scanf("%d",&nSelection);
    return nSelection;
 }
@@ -30,7 +30,9 @@ int main() {
    struct Beer *beer;
    char szType[81];
    int nSelection=0;
-   beer=NULL;
+   oneDoesSimplyGetBeerFromPlaces(beer);
+   // beer=NULL;
+    
    while (nSelection!=5) {
       nSelection=menu();
       if (nSelection==1) beer=addBeer(beer);
@@ -43,6 +45,7 @@ int main() {
             seeBeers(beer);
       } else if (nSelection==4) {
           // GEM ØL HER!
+          oneDoesSimplyNotSaveBeer(beer);
       }
    }
    return 0;

@@ -10,3 +10,6 @@ struct Beer *addBeer(struct Beer *beer);
 void seeBeers(struct Beer *beer);
 struct Beer *removeBeer(struct Beer *beer,char *szType);
 
+void oneDoesSimplyNotSaveBeer(struct Beer *beersToSave);
+void oneDoesSimplyGetBeerFromPlaces();
+
