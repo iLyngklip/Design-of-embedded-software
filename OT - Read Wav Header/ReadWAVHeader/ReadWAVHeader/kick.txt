@@ -1,0 +1,15 @@
+//
+//  main.c
+//  MM5
+//
+//  Created by Mathias Lyngklip Kjeldgaard on 03/03/2017.
+//  Copyright © 2017 Mathias Lyngklip Kjeldgaard. All rights reserved.
+//
+
+#include <stdio.h>
+
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    printf("Hello, World!\n");
+    return 0;
+}

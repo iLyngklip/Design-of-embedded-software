@@ -24,6 +24,8 @@ void Peek(HANDLE h,String s) {
 
 void Push(HANDLE h,String s) {
    /* Fill in! */
+    // stack_node_t *new_pointer;
+    
 }
 
 void Pop(HANDLE h,String s) {
