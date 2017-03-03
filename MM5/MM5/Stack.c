@@ -12,6 +12,7 @@ HANDLE createStack(int n) {
 
 void destroyStack(HANDLE h) {
    /* Fill in. destroyStack must free all allocated memory. */
+    free(&h);
 }
 
 void Peek(HANDLE h,String s) {
