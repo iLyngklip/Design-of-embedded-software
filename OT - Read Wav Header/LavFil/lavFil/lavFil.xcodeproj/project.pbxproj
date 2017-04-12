@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		76247C361E69737100A07527 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 76247C351E69737100A07527 /* main.c */; };
-		764CEAF31E71841D00A62A46 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 764CEAF21E71841D00A62A46 /* main.c */; };
+		76EBA1DE1E796F760029C48B /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 76EBA1DD1E796F760029C48B /* main.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		76247C301E69737100A07527 /* CopyFiles */ = {
+		76EBA1D81E796F760029C48B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,13 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		76247C321E69737100A07527 /* ReadWAVHeader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ReadWAVHeader; sourceTree = BUILT_PRODUCTS_DIR; };
-		76247C351E69737100A07527 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		764CEAF21E71841D00A62A46 /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = main.c; path = "../../../../../../P4 - Projektmappe/main.c"; sourceTree = "<group>"; };
+		76EBA1DA1E796F760029C48B /* lavFil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lavFil; sourceTree = BUILT_PRODUCTS_DIR; };
+		76EBA1DD1E796F760029C48B /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		76247C2F1E69737100A07527 /* Frameworks */ = {
+		76EBA1D71E796F760029C48B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,96 +38,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		76247C291E69737100A07527 = {
+		76EBA1D11E796F760029C48B = {
 			isa = PBXGroup;
 			children = (
-				76247C341E69737100A07527 /* ReadWAVHeader */,
-				76247C331E69737100A07527 /* Products */,
+				76EBA1DC1E796F760029C48B /* lavFil */,
+				76EBA1DB1E796F760029C48B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		76247C331E69737100A07527 /* Products */ = {
+		76EBA1DB1E796F760029C48B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				76247C321E69737100A07527 /* ReadWAVHeader */,
+				76EBA1DA1E796F760029C48B /* lavFil */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		76247C341E69737100A07527 /* ReadWAVHeader */ = {
+		76EBA1DC1E796F760029C48B /* lavFil */ = {
 			isa = PBXGroup;
 			children = (
-				76247C351E69737100A07527 /* main.c */,
-				764CEAF21E71841D00A62A46 /* main.c */,
+				76EBA1DD1E796F760029C48B /* main.c */,
 			);
-			path = ReadWAVHeader;
+			path = lavFil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		76247C311E69737100A07527 /* ReadWAVHeader */ = {
+		76EBA1D91E796F760029C48B /* lavFil */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 76247C391E69737100A07527 /* Build configuration list for PBXNativeTarget "ReadWAVHeader" */;
+			buildConfigurationList = 76EBA1E11E796F760029C48B /* Build configuration list for PBXNativeTarget "lavFil" */;
 			buildPhases = (
-				76247C2E1E69737100A07527 /* Sources */,
-				76247C2F1E69737100A07527 /* Frameworks */,
-				76247C301E69737100A07527 /* CopyFiles */,
+				76EBA1D61E796F760029C48B /* Sources */,
+				76EBA1D71E796F760029C48B /* Frameworks */,
+				76EBA1D81E796F760029C48B /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReadWAVHeader;
-			productName = ReadWAVHeader;
-			productReference = 76247C321E69737100A07527 /* ReadWAVHeader */;
+			name = lavFil;
+			productName = lavFil;
+			productReference = 76EBA1DA1E796F760029C48B /* lavFil */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		76247C2A1E69737100A07527 /* Project object */ = {
+		76EBA1D21E796F760029C48B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Mathias Lyngklip Kjeldgaard";
 				TargetAttributes = {
-					76247C311E69737100A07527 = {
+					76EBA1D91E796F760029C48B = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = 76247C2D1E69737100A07527 /* Build configuration list for PBXProject "ReadWAVHeader" */;
+			buildConfigurationList = 76EBA1D51E796F760029C48B /* Build configuration list for PBXProject "lavFil" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 76247C291E69737100A07527;
-			productRefGroup = 76247C331E69737100A07527 /* Products */;
+			mainGroup = 76EBA1D11E796F760029C48B;
+			productRefGroup = 76EBA1DB1E796F760029C48B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76247C311E69737100A07527 /* ReadWAVHeader */,
+				76EBA1D91E796F760029C48B /* lavFil */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		76247C2E1E69737100A07527 /* Sources */ = {
+		76EBA1D61E796F760029C48B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764CEAF31E71841D00A62A46 /* main.c in Sources */,
-				76247C361E69737100A07527 /* main.c in Sources */,
+				76EBA1DE1E796F760029C48B /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		76247C371E69737100A07527 /* Debug */ = {
+		76EBA1DF1E796F760029C48B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -173,7 +169,7 @@
 			};
 			name = Debug;
 		};
-		76247C381E69737100A07527 /* Release */ = {
+		76EBA1E01E796F760029C48B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -210,14 +206,14 @@
 			};
 			name = Release;
 		};
-		76247C3A1E69737100A07527 /* Debug */ = {
+		76EBA1E21E796F760029C48B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		76247C3B1E69737100A07527 /* Release */ = {
+		76EBA1E31E796F760029C48B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -227,25 +223,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		76247C2D1E69737100A07527 /* Build configuration list for PBXProject "ReadWAVHeader" */ = {
+		76EBA1D51E796F760029C48B /* Build configuration list for PBXProject "lavFil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76247C371E69737100A07527 /* Debug */,
-				76247C381E69737100A07527 /* Release */,
+				76EBA1DF1E796F760029C48B /* Debug */,
+				76EBA1E01E796F760029C48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		76247C391E69737100A07527 /* Build configuration list for PBXNativeTarget "ReadWAVHeader" */ = {
+		76EBA1E11E796F760029C48B /* Build configuration list for PBXNativeTarget "lavFil" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76247C3A1E69737100A07527 /* Debug */,
-				76247C3B1E69737100A07527 /* Release */,
+				76EBA1E21E796F760029C48B /* Debug */,
+				76EBA1E31E796F760029C48B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 76247C2A1E69737100A07527 /* Project object */;
+	rootObject = 76EBA1D21E796F760029C48B /* Project object */;
 }
